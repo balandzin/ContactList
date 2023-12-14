@@ -17,21 +17,21 @@ struct Person {
         var contacts:[Person] = []
         let dataStore = DataStore()
         
-        let mixedNames = Array(Set(dataStore.names))
-        let mixedSurnames = Array(Set(dataStore.surnames))
-        let mixedTelephones = Array(Set(dataStore.telephones))
-        let mixedEmails = Array(Set(dataStore.emails))
+        let names = Array(Set(dataStore.names))
+        let surnames = Array(Set(dataStore.surnames))
+        let telephones = Array(Set(dataStore.telephones))
+        let emails = Array(Set(dataStore.emails))
         
         if !dataStore.names.isEmpty {
-            for (index, _) in mixedNames.enumerated() {
-                if mixedSurnames.count > index && mixedEmails.count > index && mixedTelephones.count > index { // если в массивах разное количество элементов, то число элементов итогового массива будет равно минимальному
+            for (index, _) in names.enumerated() {
+                if surnames.count > index && emails.count > index && telephones.count > index { // если в массивах разное количество элементов, то число элементов итогового массива будет равно минимальному
                     
                     contacts.append(
                         Person(
-                            name: mixedNames[index],
-                            surname: mixedSurnames[index],
-                            telephone: mixedTelephones[index],
-                            email: mixedEmails[index]
+                            name: names[index],
+                            surname: surnames[index],
+                            telephone: telephones[index],
+                            email: emails[index]
                         )
                     )
                 }
