@@ -5,13 +5,15 @@
 //  Created by Антон Баландин on 14.12.23.
 //
 
-import Foundation
-
 struct Person {
     let name: String
     let surname: String
     let telephone: String
     let email: String
+    
+    var fullName: String {
+        "\(name) \(surname)"
+    }
     
     static func getPerson() -> [Person]{
         var contacts:[Person] = []

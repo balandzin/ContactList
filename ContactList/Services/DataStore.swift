@@ -5,8 +5,6 @@
 //  Created by Антон Баландин on 14.12.23.
 //
 
-import Foundation
-
 class DataStore {
     let names: [String] = [ // явно определяю для избежания ошибки, если массив пустой
         "Антон",
